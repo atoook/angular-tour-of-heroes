@@ -7,19 +7,11 @@
     ))
 -->
   <li *ngFor="let hero of heroes">
-    <button [class.selected]="hero === selectedHero" type="button" type="button" (click)="onSelect(hero)">
-      <span class="badge">{{hero.id}}</span>
-      <span class="name">{{hero.name}}</span>
-    </button>
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
   </li>
 </ul>
-
-<!--  
-[hero]="selectedHero"は、子コンポーネントにプロパティとしてheroを渡している
-※以下のようなイメージ
-<AppHeroDetail hero={selectedHero}/>
--->
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
 
 
 

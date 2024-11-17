@@ -10,7 +10,9 @@ import { MessageService } from '../message.service';
 })
 export class HeroesComponent {
   heroes :Hero[] = [];
-  selectedHero?: Hero;
+  
+  // ** variable below is no longer used 
+  // selectedHero?: Hero;
 
   constructor(private heroService: HeroService, private messageService: MessageService) {}
 
@@ -27,8 +29,10 @@ export class HeroesComponent {
       .subscribe(heroes => this.heroes = heroes);
   }
 
-  onSelect(hero: Hero): void{
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`)
-  }
+  // ** method below is no longer used
+  // onSelect(hero: Hero): void{
+  //   this.selectedHero = hero;
+  //   this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`)
+  // }
+
 }
