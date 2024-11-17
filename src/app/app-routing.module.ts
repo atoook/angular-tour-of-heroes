@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeroesComponent } from './heroes/heroes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 /**
  * This tells the router to match that URL to 
@@ -8,7 +9,9 @@ import { HeroesComponent } from './heroes/heroes.component';
  * when the URL is something like localhost:4200/heroes.
 **/
 const routes: Routes = [
-  {path: 'heroes', component: HeroesComponent}
+  {path: 'heroes', component: HeroesComponent},
+  {path: 'dashboard', component: DashboardComponent},
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 
 @NgModule({
