@@ -13,3 +13,13 @@
     </button>
   </li>
 </ul>
+
+<!--  
+[hero]="selectedHero"は、子コンポーネントにプロパティとしてheroを渡している
+※以下のようなイメージ
+<AppHeroDetail hero={selectedHero}/>
+-->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+
+
+
